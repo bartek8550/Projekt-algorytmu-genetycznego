@@ -28,6 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			textBoxA = new TextBox();
 			textBoxB = new TextBox();
 			textBoxN = new TextBox();
@@ -90,7 +93,28 @@
 			label6 = new Label();
 			radioButtonMaksimum = new RadioButton();
 			radioButtonMinimum = new RadioButton();
+			checkBoxElite = new CheckBox();
+			textBoxT = new TextBox();
+			T = new Label();
+			Wykres = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			dataGridView2 = new DataGridView();
+			Column16 = new DataGridViewTextBoxColumn();
+			Column17 = new DataGridViewTextBoxColumn();
+			Column18 = new DataGridViewTextBoxColumn();
+			Column19 = new DataGridViewTextBoxColumn();
+			Column20 = new DataGridViewTextBoxColumn();
+			dataGridView3 = new DataGridView();
+			Column21 = new DataGridViewTextBoxColumn();
+			Column22 = new DataGridViewTextBoxColumn();
+			Column23 = new DataGridViewTextBoxColumn();
+			Column24 = new DataGridViewTextBoxColumn();
+			Column25 = new DataGridViewTextBoxColumn();
+			Column26 = new DataGridViewTextBoxColumn();
+			button2 = new Button();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)Wykres).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
 			SuspendLayout();
 			// 
 			// textBoxA
@@ -297,11 +321,12 @@
 			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn27, Column1, Column6, Column2, Column3, Column4, Column5, Column7, Column8, Column9, Column10, Column11, Column12, Column13, Column14, Column15 });
-			dataGridView1.Location = new Point(3, 146);
+			dataGridView1.Location = new Point(3, 627);
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.RowTemplate.Height = 25;
-			dataGridView1.Size = new Size(1602, 340);
+			dataGridView1.Size = new Size(28, 24);
 			dataGridView1.TabIndex = 9;
+			dataGridView1.Visible = false;
 			// 
 			// dataGridViewTextBoxColumn27
 			// 
@@ -485,11 +510,161 @@
 			radioButtonMinimum.Text = "Minimum";
 			radioButtonMinimum.UseVisualStyleBackColor = true;
 			// 
+			// checkBoxElite
+			// 
+			checkBoxElite.AutoSize = true;
+			checkBoxElite.Location = new Point(1157, 109);
+			checkBoxElite.Name = "checkBoxElite";
+			checkBoxElite.Size = new Size(48, 19);
+			checkBoxElite.TabIndex = 16;
+			checkBoxElite.Text = "Elita";
+			checkBoxElite.UseVisualStyleBackColor = true;
+			// 
+			// textBoxT
+			// 
+			textBoxT.Location = new Point(955, 73);
+			textBoxT.Name = "textBoxT";
+			textBoxT.Size = new Size(100, 23);
+			textBoxT.TabIndex = 17;
+			textBoxT.Text = "100";
+			// 
+			// T
+			// 
+			T.AutoSize = true;
+			T.Location = new Point(936, 77);
+			T.Name = "T";
+			T.Size = new Size(13, 15);
+			T.TabIndex = 18;
+			T.Text = "T";
+			// 
+			// Wykres
+			// 
+			chartArea2.Name = "ChartArea1";
+			Wykres.ChartAreas.Add(chartArea2);
+			legend2.Name = "Legend1";
+			Wykres.Legends.Add(legend2);
+			Wykres.Location = new Point(3, 125);
+			Wykres.Name = "Wykres";
+			series2.ChartArea = "ChartArea1";
+			series2.Legend = "Legend1";
+			series2.Name = "Series1";
+			Wykres.Series.Add(series2);
+			Wykres.Size = new Size(904, 300);
+			Wykres.TabIndex = 19;
+			Wykres.Text = "Dane";
+			// 
+			// dataGridView2
+			// 
+			dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column16, Column17, Column18, Column19, Column20 });
+			dataGridView2.Location = new Point(46, 450);
+			dataGridView2.Name = "dataGridView2";
+			dataGridView2.RowTemplate.Height = 25;
+			dataGridView2.Size = new Size(861, 201);
+			dataGridView2.TabIndex = 20;
+			// 
+			// Column16
+			// 
+			Column16.HeaderText = "Lp";
+			Column16.Name = "Column16";
+			Column16.Width = 45;
+			// 
+			// Column17
+			// 
+			Column17.HeaderText = "Xreal";
+			Column17.Name = "Column17";
+			Column17.Width = 58;
+			// 
+			// Column18
+			// 
+			Column18.HeaderText = "Xbin";
+			Column18.Name = "Column18";
+			Column18.Width = 56;
+			// 
+			// Column19
+			// 
+			Column19.HeaderText = "f(x)";
+			Column19.Name = "Column19";
+			Column19.Width = 50;
+			// 
+			// Column20
+			// 
+			Column20.HeaderText = "%";
+			Column20.Name = "Column20";
+			Column20.Width = 42;
+			// 
+			// dataGridView3
+			// 
+			dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			dataGridView3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+			dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView3.Columns.AddRange(new DataGridViewColumn[] { Column21, Column22, Column23, Column24, Column25, Column26 });
+			dataGridView3.Location = new Point(936, 226);
+			dataGridView3.Name = "dataGridView3";
+			dataGridView3.RowTemplate.Height = 25;
+			dataGridView3.Size = new Size(674, 416);
+			dataGridView3.TabIndex = 21;
+			// 
+			// Column21
+			// 
+			Column21.HeaderText = "Lp";
+			Column21.Name = "Column21";
+			Column21.Width = 45;
+			// 
+			// Column22
+			// 
+			Column22.HeaderText = "N";
+			Column22.Name = "Column22";
+			Column22.Width = 41;
+			// 
+			// Column23
+			// 
+			Column23.HeaderText = "Pk";
+			Column23.Name = "Column23";
+			Column23.Width = 45;
+			// 
+			// Column24
+			// 
+			Column24.HeaderText = "Pm";
+			Column24.Name = "Column24";
+			Column24.Width = 50;
+			// 
+			// Column25
+			// 
+			Column25.HeaderText = "T";
+			Column25.Name = "Column25";
+			Column25.Width = 38;
+			// 
+			// Column26
+			// 
+			Column26.HeaderText = "f(x)";
+			Column26.Name = "Column26";
+			Column26.Width = 50;
+			// 
+			// button2
+			// 
+			button2.Location = new Point(1158, 174);
+			button2.Name = "button2";
+			button2.Size = new Size(75, 23);
+			button2.TabIndex = 22;
+			button2.Text = "Testy";
+			button2.UseVisualStyleBackColor = true;
+			button2.Click += button2_Click;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1617, 615);
+			ClientSize = new Size(1634, 663);
+			Controls.Add(button2);
+			Controls.Add(dataGridView3);
+			Controls.Add(dataGridView2);
+			Controls.Add(Wykres);
+			Controls.Add(T);
+			Controls.Add(textBoxT);
+			Controls.Add(checkBoxElite);
 			Controls.Add(radioButtonMinimum);
 			Controls.Add(radioButtonMaksimum);
 			Controls.Add(label6);
@@ -509,6 +684,9 @@
 			Name = "Form1";
 			Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)Wykres).EndInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -577,5 +755,23 @@
 		private Label label6;
 		private RadioButton radioButtonMaksimum;
 		private RadioButton radioButtonMinimum;
+		private CheckBox checkBoxElite;
+		private TextBox textBoxT;
+		private Label T;
+		private System.Windows.Forms.DataVisualization.Charting.Chart Wykres;
+		private DataGridView dataGridView2;
+		private DataGridViewTextBoxColumn Column16;
+		private DataGridViewTextBoxColumn Column17;
+		private DataGridViewTextBoxColumn Column18;
+		private DataGridViewTextBoxColumn Column19;
+		private DataGridViewTextBoxColumn Column20;
+		private DataGridView dataGridView3;
+		private DataGridViewTextBoxColumn Column21;
+		private DataGridViewTextBoxColumn Column22;
+		private DataGridViewTextBoxColumn Column23;
+		private DataGridViewTextBoxColumn Column24;
+		private DataGridViewTextBoxColumn Column25;
+		private DataGridViewTextBoxColumn Column26;
+		private Button button2;
 	}
 }
